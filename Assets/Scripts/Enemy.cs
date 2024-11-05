@@ -1,8 +1,18 @@
+using System.Collections;
 using UnityEngine;
 
-public class Enemy : MonoBehaviour
+public abstract class Enemy : MonoBehaviour
 {
-    private float _moveSpeed = 10f;
+    #region Private Fields
+    private Rigidbody thisRb;
+    private float _moveSpeed = 100f;
+    private bool _moveEnabled = true;
+    private bool _attackEnabled = true;
+    private float _attackTime = 1f;
+    private bool attackTimerRunning = true;
+    #endregion
+
+    #region Public Properties
     public float MoveSpeed
     {
         get { return _moveSpeed; }
@@ -12,8 +22,62 @@ public class Enemy : MonoBehaviour
             _moveSpeed = value;
         }
     }
+    public bool MoveEnabled // in case we find a different method of movement and the move in fixed update becomes problematic
+    { 
+        get { return _moveEnabled; } 
+        set { _moveEnabled = value; }    
+    }
+    public bool AttackEnabled
+    {
+        get { return _attackEnabled; }
+        private set { _attackEnabled = !_attackEnabled; } // I'm really toying around with ideas of how to utilize setters and getters.  Seemed interesting to make a toggle instead
+    }
+    // felt like toggle makes sense to be with the props since it controls the setter basically
+    public void ToggleAttackEnabled()
+    {
+        AttackEnabled = !AttackEnabled;
+    }
+    public float AttackTime
+    {
+        get { return _attackTime; }
+        set { _attackTime = value; }
+    }
+    #endregion
 
-    //TODO: make the same movement here as the MoveDown in my personal project maybe.  Make them so that they can be overridden so virtual or I think we can do abstract if we 
-    //TODO: want every object to set their own up.  Maybe actually make the weapons be abstract and each sets their own weapons.  so virtual for move so that I can adjust for 
-    //TODO: more asteroid like behavior or differing enemies and then abstract for weapons.
+    private void Start()
+    {
+        thisRb = GetComponent<Rigidbody>();
+        StartCoroutine(AttackTimer());
+    }
+
+    public void FixedUpdate()
+    {
+        if (_moveEnabled)
+        {
+            MoveDown();
+        }
+    }
+
+    //MoveDown is virtual and can be overridden if necessary
+    protected virtual void MoveDown()
+    {
+        Vector3 down = new Vector3(0, 0, -1);
+        if (thisRb != null)
+        {
+            Vector3 downForce = down * _moveSpeed;
+            thisRb.AddForce(downForce, ForceMode.Force);
+        }
+    }
+
+    // Attack is abstract and must be overridden an implemented in each inheriting classes own way
+    protected abstract void Attack();
+
+    protected virtual IEnumerator AttackTimer()
+    {
+        while (_attackEnabled)
+        {
+            yield return new WaitForSeconds(_attackTime);
+        }
+    }
+
 }
