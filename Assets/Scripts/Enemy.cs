@@ -4,12 +4,13 @@ using UnityEngine;
 public abstract class Enemy : MonoBehaviour
 {
     #region Private Fields
-    private Rigidbody thisRb;
+    [SerializeField] private Rigidbody thisRb;
     private float _moveSpeed = 100f;
     private bool _moveEnabled = true;
-    private bool _attackEnabled = true;
+
+    private bool _attackEnabled;
     private float _attackTime = 1f;
-    private bool attackTimerRunning = true;
+    private Coroutine attackCoroutine;
     #endregion
 
     #region Public Properties
@@ -27,16 +28,28 @@ public abstract class Enemy : MonoBehaviour
         get { return _moveEnabled; } 
         set { _moveEnabled = value; }    
     }
+
+    // Start or stop attack timer based on passed value
     public bool AttackEnabled
     {
         get { return _attackEnabled; }
-        private set { _attackEnabled = !_attackEnabled; } // I'm really toying around with ideas of how to utilize setters and getters.  Seemed interesting to make a toggle instead
+        set 
+        { 
+            if (_attackEnabled != value) 
+            {
+                _attackEnabled = value;
+            }
+            if (_attackEnabled)
+            {
+                StartAttackTimer();
+            }
+            else
+            {
+                StopAttackTimer();
+            }
+        } // I'm really toying around with ideas of how to utilize setters and getters.  Seemed interesting to make a toggle instead
     }
-    // felt like toggle makes sense to be with the props since it controls the setter basically
-    public void ToggleAttackEnabled()
-    {
-        AttackEnabled = !AttackEnabled;
-    }
+   
     public float AttackTime
     {
         get { return _attackTime; }
@@ -44,10 +57,11 @@ public abstract class Enemy : MonoBehaviour
     }
     #endregion
 
+    // control attack coroutine by enabling attack
     private void Start()
     {
         thisRb = GetComponent<Rigidbody>();
-        StartCoroutine(AttackTimer());
+        //AttackEnabled = true;
     }
 
     public void FixedUpdate()
@@ -72,11 +86,32 @@ public abstract class Enemy : MonoBehaviour
     // Attack is abstract and must be overridden an implemented in each inheriting classes own way
     protected abstract void Attack();
 
+    private void StartAttackTimer()
+    {
+        if (attackCoroutine != null)
+        {
+            StopCoroutine(attackCoroutine);
+        }
+        attackCoroutine = StartCoroutine(AttackTimer());
+    }
+
+    private void StopAttackTimer()
+    {
+        if (attackCoroutine != null)
+        {
+            StopCoroutine(attackCoroutine);
+            attackCoroutine = null;
+        }
+    }
+
+    // AttackTimer is adjustable using AttackTime to set the wait value as well as overriding this funciton if necessary
     protected virtual IEnumerator AttackTimer()
     {
         while (_attackEnabled)
         {
+            Debug.Log("Attacking");
             yield return new WaitForSeconds(_attackTime);
+            Attack(); 
         }
     }
 

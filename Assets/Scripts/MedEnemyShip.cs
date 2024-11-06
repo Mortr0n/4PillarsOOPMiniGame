@@ -6,4 +6,9 @@ public class MedEnemyShip : Enemy
     {
         Debug.Log("Medium ship attacking");
     }
+    
+    void Start()
+    {
+        MoveSpeed = 200f;
+    }
 }
