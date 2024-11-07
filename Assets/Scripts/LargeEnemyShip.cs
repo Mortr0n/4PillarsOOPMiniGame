@@ -3,6 +3,7 @@ using UnityEngine;
 public class LargeEnemyShip : Enemy
 {
     [SerializeField] GameObject plasmaObj;
+    [SerializeField] GameObject firePoint;
     public float plasmaBallSpeed = 200f;
 
     void Start()
@@ -20,7 +21,7 @@ public class LargeEnemyShip : Enemy
     private void FirePlasmaBall()
     {
         Debug.Log("Firing plasma ball");
-        GameObject plasmaBall = Instantiate(plasmaObj, transform.position, transform.rotation);
+        GameObject plasmaBall = Instantiate(plasmaObj, firePoint.transform.position, firePoint.transform.rotation);
 
         Vector3 down = new Vector3(0, 0, -1);
 
