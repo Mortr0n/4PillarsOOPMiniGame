@@ -1,7 +1,7 @@
 using Unity.VisualScripting;
 using UnityEngine;
 
-public class LargeEnemyShip : Enemy
+public class LargeEnemyShip : Enemy //INHERITANCE
 {
     //[SerializeField] GameObject plasmaObj;
     //[SerializeField] GameObject firePoint;
@@ -17,6 +17,7 @@ public class LargeEnemyShip : Enemy
         ejectForce = 5f;
     }
 
+    // POLYMORPHISM
     protected override void Attack()
     {
         //Debug.Log("Large ship attacking");

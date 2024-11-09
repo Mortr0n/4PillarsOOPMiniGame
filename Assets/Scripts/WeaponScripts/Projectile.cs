@@ -11,6 +11,7 @@ public abstract class Projectile : MonoBehaviour
     protected static readonly Vector3 Down = new Vector3(0, 0, -1);
     protected static readonly Vector3 Up = new Vector3(0, 0, 1);
 
+    // ENCAPSULATION
     protected float MoveSpeed { get { return _moveSpeed; } set { _moveSpeed = value; } }
     protected float Damage { get { return _damage; } set { _damage = value; } }
     protected GameObject TargetObject { get { return _targetObject; } }

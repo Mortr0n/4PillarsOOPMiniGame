@@ -26,6 +26,34 @@ public class PlayerController : MonoBehaviour
 
     private void FixedUpdate()
     {
+        MovePlayer();  // ABSTRACTION
+    }
+
+    void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.Mouse0) && canFire)
+        {
+            canFire = false;
+            StartCoroutine(FireWeapon(playerLaser));
+        }
+    }
+
+    private IEnumerator FireWeapon(GameObject weapon) // ABSTRACTION
+    {
+        Vector3 rotation = new Vector3(0, 90, 90);
+        Quaternion rotationQuat = Quaternion.Euler(rotation);
+        GameObject firedWeapon = Instantiate(weapon, _firePoint.transform.position, rotationQuat);
+        Rigidbody weaponRb = firedWeapon.GetComponent<Rigidbody>();
+
+        // Apply an initial impulse to shoot away from the ship
+        Vector3 impulseForce = initialImpulseDirection * ejectForce;
+        weaponRb.AddForce(impulseForce, ForceMode.Impulse);
+        yield return new WaitForSeconds(weaponFirePause);
+        canFire = true;
+    }
+
+    private void MovePlayer() // ABSTRACTION
+    {
         Vector3 playerPos = transform.position;
         float xInput = Input.GetAxis("Horizontal");
         float zInput = Input.GetAxis("Vertical");
@@ -50,28 +78,5 @@ public class PlayerController : MonoBehaviour
             Vector3 move = new Vector3(xInput, 0, zInput) * moveSpeed;
             transform.Translate(move);
         }
-    }
-
-    void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.Mouse0) && canFire)
-        {
-            canFire = false;
-            StartCoroutine(FireWeapon(playerLaser));
-        }
-    }
-
-    private IEnumerator FireWeapon(GameObject weapon)
-    {
-        Vector3 rotation = new Vector3(0, 90, 90);
-        Quaternion rotationQuat = Quaternion.Euler(rotation);
-        GameObject firedWeapon = Instantiate(weapon, _firePoint.transform.position, rotationQuat);
-        Rigidbody weaponRb = firedWeapon.GetComponent<Rigidbody>();
-
-        // Apply an initial impulse to shoot away from the ship
-        Vector3 impulseForce = initialImpulseDirection * ejectForce;
-        weaponRb.AddForce(impulseForce, ForceMode.Impulse);
-        yield return new WaitForSeconds(weaponFirePause);
-        canFire = true;
     }
 }

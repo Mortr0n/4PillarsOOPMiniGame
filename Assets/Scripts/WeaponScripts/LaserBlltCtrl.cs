@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class LaserBlltCtrl : Projectile
+public class LaserBlltCtrl : Projectile //INHERITANCE
 {
     private void Start()
     {
@@ -8,7 +8,7 @@ public class LaserBlltCtrl : Projectile
         MoveSpeed = 1.0f;
     }
 
-    public override void Move()
+    public override void Move() // POLYMORPHISM
     {
         
         Vector3 downForce = Down * MoveSpeed;

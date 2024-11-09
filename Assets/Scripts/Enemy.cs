@@ -18,6 +18,7 @@ public abstract class Enemy : MonoBehaviour
     #endregion
 
     #region Public Properties
+    // ENCAPSULATION
     public float MoveSpeed
     {
         get { return _moveSpeed; }

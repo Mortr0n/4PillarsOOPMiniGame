@@ -1,7 +1,7 @@
 using UnityEngine;
 using System.Collections;
 
-public class PlasmaBallCtrl : Projectile
+public class PlasmaBallCtrl : Projectile //INHERITANCE
 {
     //public GameObject Target;
     private float timeToReTarget = .3f;
@@ -26,7 +26,7 @@ public class PlasmaBallCtrl : Projectile
         StartCoroutine(SelfDestructTimer());
     }
 
-    public override void Move()
+    public override void Move()  // POLYMORPHISM
     {
         if (transform.position.x < -xBoundary || transform.position.z < -zBoundary || transform.position.z > zBoundary || transform.position.x > xBoundary)
         {

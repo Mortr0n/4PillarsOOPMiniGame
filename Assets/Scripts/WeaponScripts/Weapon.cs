@@ -7,6 +7,7 @@ public abstract class Weapon : MonoBehaviour
     protected float _fireSpeed;
     protected float _fireWaitTime;
 
+    // ENCAPSULATION
     public Weapon(Transform firePoint)
     { _firePoint = firePoint; }
     public float FireRate
