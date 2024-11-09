@@ -1,35 +1,46 @@
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class LargeEnemyShip : Enemy
 {
     [SerializeField] GameObject plasmaObj;
     [SerializeField] GameObject firePoint;
-    public float plasmaBallSpeed = 200f;
+    //[SerializeField] GameObject playerObject;
+    public float plasmaBallSpeed = 10f;
+    private Vector3 initialImpulseDirection = new Vector3(0, 0, -1);
+    private float ejectForce = 5f;
 
     void Start()
     {
         MoveSpeed = 150;
         AttackEnabled = true;
+
     }
 
     protected override void Attack()
     {
-        Debug.Log("Large ship attacking");
+        //Debug.Log("Large ship attacking");
         FirePlasmaBall();
     }
 
     private void FirePlasmaBall()
     {
-        Debug.Log("Firing plasma ball");
+        //Debug.Log("Firing plasma ball");
         GameObject plasmaBall = Instantiate(plasmaObj, firePoint.transform.position, firePoint.transform.rotation);
+        Rigidbody plasmaRb = plasmaBall.GetComponent<Rigidbody>(); 
+        // Apply an initial impulse to shoot away from the ship
+        Vector3 impulseForce = initialImpulseDirection * ejectForce;
+        plasmaRb.AddForce(impulseForce, ForceMode.Impulse);
 
-        Vector3 down = new Vector3(0, 0, -1);
-
-        Rigidbody pRb = plasmaBall.GetComponent<Rigidbody>();
-        if (pRb != null) 
+        Projectile plasmaCtrl = plasmaBall.GetComponent<Projectile>();
+        if (plasmaCtrl != null)
         {
-            Vector3 downForce = down * plasmaBallSpeed;
-            pRb.AddForce(downForce, ForceMode.VelocityChange);
-        };
+            plasmaCtrl.SetTarget(GameObject.FindWithTag("Player"));
+        }
+        else
+        {
+            Debug.LogError("unable to set target using plasma ball projectile controller");
+        }
+        
     }
 }
