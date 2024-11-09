@@ -7,6 +7,9 @@ public abstract class Projectile : MonoBehaviour
     private float _damage;
     [SerializeField] private GameObject _targetObject;
     public int count;
+    //private Vector3 Down => new Vector3(0, 0, -1);
+    protected static readonly Vector3 Down = new Vector3(0, 0, -1);
+    protected static readonly Vector3 Up = new Vector3(0, 0, 1);
 
     protected float MoveSpeed { get { return _moveSpeed; } set { _moveSpeed = value; } }
     protected float Damage { get { return _damage; } set { _damage = value; } }
@@ -32,13 +35,7 @@ public abstract class Projectile : MonoBehaviour
     }
 
     void FixedUpdate()
-    {
-        //if (count < 1)
-        //{
-        //    Debug.Log("Fixed update before move called");
-        //} 
-        //count++;
-        
+    {        
         Move();
     }
 

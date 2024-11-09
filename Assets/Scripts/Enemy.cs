@@ -5,12 +5,16 @@ public abstract class Enemy : MonoBehaviour
 {
     #region Private Fields
     [SerializeField] private Rigidbody thisRb;
+    [SerializeField] protected GameObject _firePoint;
+    [SerializeField] protected GameObject _weaponDischarge;
     private float _moveSpeed = 100f;
     private bool _moveEnabled = true;
 
     private bool _attackEnabled;
     private float _attackTime = 1f;
     private Coroutine attackCoroutine;
+    protected float ejectForce = 5f;
+    protected Vector3 initialImpulseDirection = new Vector3(0, 0, -1);
     #endregion
 
     #region Public Properties
