@@ -12,11 +12,18 @@ public class PlayerController : MonoBehaviour
     private float weaponFirePause = .1f;
     private float ejectForce = 2f;
 
+    private int _playerHealth = 3;
+
+    private float yPos = 3f;
     private float xBoundary = 10.2f;
     private float zBoundary = 7f;
-    private float moveSpeed = 1.5f;
+    private float moveSpeed = .5f;
 
-    
+    public int PlayerHealth
+    {
+        get { return _playerHealth; }
+        set { _playerHealth = value; }
+    }
 
     void Start()
     {
@@ -59,24 +66,40 @@ public class PlayerController : MonoBehaviour
         float zInput = Input.GetAxis("Vertical");
         if (transform.position.x < -xBoundary)
         {
-            transform.position = new Vector3(-xBoundary, 0, transform.position.z);
+            transform.position = new Vector3(-xBoundary, yPos, transform.position.z);
         }
         if (transform.position.z < -zBoundary)
         {
-            transform.position = new Vector3(transform.position.x, 0, -zBoundary);
+            transform.position = new Vector3(transform.position.x, yPos, -zBoundary);
         }
         if (transform.position.z > zBoundary)
         {
-            transform.position = new Vector3(transform.position.x, 0, zBoundary);
+            transform.position = new Vector3(transform.position.x, yPos, zBoundary);
         }
         if (transform.position.x > xBoundary)
         {
-            transform.position = new Vector3(xBoundary, 0, transform.position.z);
+            transform.position = new Vector3(xBoundary, yPos, transform.position.z);
         }
         else
         {
             Vector3 move = new Vector3(xInput, 0, zInput) * moveSpeed;
             transform.Translate(move);
         }
+        transform.position = new Vector3(transform.position.x, yPos, transform.position.z);
     }
+
+    public void DamagePlayer()
+    {
+        if (PlayerHealth > 1)
+        {
+            PlayerHealth--;
+        }
+        else
+        {
+            PlayerHealth = 0;
+            GameManager.Instance.LoseGame();
+        }
+    }
+
+    
 }
