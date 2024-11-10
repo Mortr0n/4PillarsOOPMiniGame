@@ -8,6 +8,7 @@ public class GameManager : MonoBehaviour
 
     private SaveData saveData;
     private TextMeshProUGUI scoreText;
+    private TextMeshProUGUI livesText;
     [SerializeField] private string hScoreName;
 
     private int _score;
@@ -40,6 +41,11 @@ public class GameManager : MonoBehaviour
         scoreText = GameObject.Find("Score Text").GetComponent<TextMeshProUGUI>();
         ResetScore();
         UpdateScoreText(Score);
+        PlayerController playerController = GameObject.Find("Player").GetComponent<PlayerController>();
+        if (playerController != null) 
+        {
+            UpdateLivesText(playerController.PlayerHealth);
+        }
     }
 
     public void GoToMenu()
@@ -61,6 +67,18 @@ public class GameManager : MonoBehaviour
             scoreText.text = $"Score: {score}";
         }
     }
+
+    public void UpdateLivesText(int lives)
+    {
+        livesText = GameObject.Find("Lives Text").GetComponent<TextMeshProUGUI>();
+        //Debug.Log($"Updating Score text with {Score} and scoretext is {scoreText}");
+        if (livesText != null)
+        {
+            livesText.text = $"Lives: {lives}";
+        }
+    }
+
+
 
     //public void UpdateName()
     //{

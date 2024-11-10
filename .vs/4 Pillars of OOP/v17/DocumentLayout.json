@@ -3,12 +3,24 @@
   "WorkspaceRootPath": "C:\\Users\\cmsl4\\Documents\\CreateWithCode2\\4 Pillars of OOP\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{E8C351C4-456C-AFF7-4BEE-EAC907D3AEF4}|Assembly-CSharp.csproj|C:\\Users\\cmsl4\\Documents\\CreateWithCode2\\4 Pillars of OOP\\assets\\scripts\\playercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{E8C351C4-456C-AFF7-4BEE-EAC907D3AEF4}|Assembly-CSharp.csproj|C:\\Users\\cmsl4\\Documents\\CreateWithCode2\\4 Pillars of OOP\\assets\\scripts\\gamemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E8C351C4-456C-AFF7-4BEE-EAC907D3AEF4}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\gamemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E8C351C4-456C-AFF7-4BEE-EAC907D3AEF4}|Assembly-CSharp.csproj|c:\\users\\cmsl4\\documents\\createwithcode2\\4 pillars of oop\\assets\\scripts\\playercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{E8C351C4-456C-AFF7-4BEE-EAC907D3AEF4}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\playercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E8C351C4-456C-AFF7-4BEE-EAC907D3AEF4}|Assembly-CSharp.csproj|C:\\Users\\cmsl4\\Documents\\CreateWithCode2\\4 Pillars of OOP\\assets\\scripts\\gamemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E8C351C4-456C-AFF7-4BEE-EAC907D3AEF4}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\gamemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{E8C351C4-456C-AFF7-4BEE-EAC907D3AEF4}|Assembly-CSharp.csproj|C:\\Users\\cmsl4\\Documents\\CreateWithCode2\\4 Pillars of OOP\\assets\\scripts\\enemyscripts\\enemy.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E8C351C4-456C-AFF7-4BEE-EAC907D3AEF4}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\enemyscripts\\enemy.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E8C351C4-456C-AFF7-4BEE-EAC907D3AEF4}|Assembly-CSharp.csproj|C:\\Users\\cmsl4\\Documents\\CreateWithCode2\\4 Pillars of OOP\\assets\\scripts\\gameinitializer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E8C351C4-456C-AFF7-4BEE-EAC907D3AEF4}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\gameinitializer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E8C351C4-456C-AFF7-4BEE-EAC907D3AEF4}|Assembly-CSharp.csproj|C:\\Users\\cmsl4\\Documents\\CreateWithCode2\\4 Pillars of OOP\\assets\\scripts\\datamanagement\\savedata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E8C351C4-456C-AFF7-4BEE-EAC907D3AEF4}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\datamanagement\\savedata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{E8C351C4-456C-AFF7-4BEE-EAC907D3AEF4}|Assembly-CSharp.csproj|C:\\Users\\cmsl4\\Documents\\CreateWithCode2\\4 Pillars of OOP\\assets\\scripts\\datamanagement\\savemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -19,24 +31,12 @@
       "RelativeMoniker": "D:0:0:{E8C351C4-456C-AFF7-4BEE-EAC907D3AEF4}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\menuscripts\\menucontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E8C351C4-456C-AFF7-4BEE-EAC907D3AEF4}|Assembly-CSharp.csproj|C:\\Users\\cmsl4\\Documents\\CreateWithCode2\\4 Pillars of OOP\\assets\\scripts\\datamanagement\\savedata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E8C351C4-456C-AFF7-4BEE-EAC907D3AEF4}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\datamanagement\\savedata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E8C351C4-456C-AFF7-4BEE-EAC907D3AEF4}|Assembly-CSharp.csproj|c:\\users\\cmsl4\\documents\\createwithcode2\\4 pillars of oop\\assets\\scripts\\enemyscripts\\enemy.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E8C351C4-456C-AFF7-4BEE-EAC907D3AEF4}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\enemyscripts\\enemy.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{E8C351C4-456C-AFF7-4BEE-EAC907D3AEF4}|Assembly-CSharp.csproj|C:\\Users\\cmsl4\\Documents\\CreateWithCode2\\4 Pillars of OOP\\assets\\scripts\\datamanagement\\highscoredataextensions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{E8C351C4-456C-AFF7-4BEE-EAC907D3AEF4}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\datamanagement\\highscoredataextensions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{E8C351C4-456C-AFF7-4BEE-EAC907D3AEF4}|Assembly-CSharp.csproj|C:\\Users\\cmsl4\\Documents\\CreateWithCode2\\4 Pillars of OOP\\assets\\scripts\\datamanagement\\highscoredata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{E8C351C4-456C-AFF7-4BEE-EAC907D3AEF4}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\datamanagement\\highscoredata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E8C351C4-456C-AFF7-4BEE-EAC907D3AEF4}|Assembly-CSharp.csproj|C:\\Users\\cmsl4\\Documents\\CreateWithCode2\\4 Pillars of OOP\\assets\\scripts\\gameinitializer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E8C351C4-456C-AFF7-4BEE-EAC907D3AEF4}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\gameinitializer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{E8C351C4-456C-AFF7-4BEE-EAC907D3AEF4}|Assembly-CSharp.csproj|C:\\Users\\cmsl4\\Documents\\CreateWithCode2\\4 Pillars of OOP\\assets\\scripts\\weaponscripts\\playerlaser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -66,37 +66,37 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 10,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 2,
               "Title": "Enemy.cs",
               "DocumentMoniker": "C:\\Users\\cmsl4\\Documents\\CreateWithCode2\\4 Pillars of OOP\\Assets\\Scripts\\EnemyScripts\\Enemy.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\EnemyScripts\\Enemy.cs",
               "ToolTip": "C:\\Users\\cmsl4\\Documents\\CreateWithCode2\\4 Pillars of OOP\\Assets\\Scripts\\EnemyScripts\\Enemy.cs",
               "RelativeToolTip": "Assets\\Scripts\\EnemyScripts\\Enemy.cs",
-              "ViewState": "AgIAAGQAAAAAAAAAAAArwHEAAABLAAAAAAAAAA==",
+              "ViewState": "AgIAAGQAAAAAAAAAAAArwHgAAAApAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-10T01:34:32.629Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
               "Title": "GameManager.cs",
               "DocumentMoniker": "C:\\Users\\cmsl4\\Documents\\CreateWithCode2\\4 Pillars of OOP\\Assets\\Scripts\\GameManager.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\GameManager.cs",
               "ToolTip": "C:\\Users\\cmsl4\\Documents\\CreateWithCode2\\4 Pillars of OOP\\Assets\\Scripts\\GameManager.cs",
               "RelativeToolTip": "Assets\\Scripts\\GameManager.cs",
-              "ViewState": "AgIAACoAAAAAAAAAAAD4v0MAAAAHAAAAAAAAAA==",
+              "ViewState": "AgIAABoAAAAAAAAAAAD4vysAAABGAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-10T01:20:56.946Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 3,
               "Title": "GameInitializer.cs",
               "DocumentMoniker": "C:\\Users\\cmsl4\\Documents\\CreateWithCode2\\4 Pillars of OOP\\Assets\\Scripts\\GameInitializer.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\GameInitializer.cs",
@@ -109,7 +109,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 5,
               "Title": "SaveManager.cs",
               "DocumentMoniker": "C:\\Users\\cmsl4\\Documents\\CreateWithCode2\\4 Pillars of OOP\\Assets\\Scripts\\DataManagement\\SaveManager.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\DataManagement\\SaveManager.cs",
@@ -117,8 +117,7 @@
               "RelativeToolTip": "Assets\\Scripts\\DataManagement\\SaveManager.cs",
               "ViewState": "AgIAACAAAAAAAAAAAADwv0MAAAAQAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-10T01:13:08.204Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-10T01:13:08.204Z"
             },
             {
               "$type": "Document",
@@ -135,7 +134,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 7,
               "Title": "HighScoreDataExtensions.cs",
               "DocumentMoniker": "C:\\Users\\cmsl4\\Documents\\CreateWithCode2\\4 Pillars of OOP\\Assets\\Scripts\\DataManagement\\HighScoreDataExtensions.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\DataManagement\\HighScoreDataExtensions.cs",
@@ -143,12 +142,11 @@
               "RelativeToolTip": "Assets\\Scripts\\DataManagement\\HighScoreDataExtensions.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAsAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-10T01:13:06.54Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-10T01:13:06.54Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 8,
               "Title": "HighScoreData.cs",
               "DocumentMoniker": "C:\\Users\\cmsl4\\Documents\\CreateWithCode2\\4 Pillars of OOP\\Assets\\Scripts\\DataManagement\\HighScoreData.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\DataManagement\\HighScoreData.cs",
@@ -156,12 +154,11 @@
               "RelativeToolTip": "Assets\\Scripts\\DataManagement\\HighScoreData.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAqwAYAAAAUAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-10T01:13:05.512Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-10T01:13:05.512Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 6,
               "Title": "MenuController.cs",
               "DocumentMoniker": "C:\\Users\\cmsl4\\Documents\\CreateWithCode2\\4 Pillars of OOP\\Assets\\Scripts\\MenuScripts\\MenuController.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\MenuScripts\\MenuController.cs",
@@ -169,8 +166,7 @@
               "RelativeToolTip": "Assets\\Scripts\\MenuScripts\\MenuController.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAAAnAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-09T23:15:46.313Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-09T23:15:46.313Z"
             },
             {
               "$type": "Document",
@@ -198,13 +194,13 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "PlayerController.cs",
               "DocumentMoniker": "C:\\Users\\cmsl4\\Documents\\CreateWithCode2\\4 Pillars of OOP\\Assets\\Scripts\\PlayerController.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\PlayerController.cs",
               "ToolTip": "C:\\Users\\cmsl4\\Documents\\CreateWithCode2\\4 Pillars of OOP\\Assets\\Scripts\\PlayerController.cs",
               "RelativeToolTip": "Assets\\Scripts\\PlayerController.cs",
-              "ViewState": "AgIAABsAAAAAAAAAAAA5wBMAAAAgAAAAAAAAAA==",
+              "ViewState": "AgIAADcAAAAAAAAAAADgv18AAAAwAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-09T16:26:46.804Z",
               "EditorCaption": ""

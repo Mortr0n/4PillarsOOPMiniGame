@@ -93,6 +93,7 @@ public class PlayerController : MonoBehaviour
         if (PlayerHealth > 1)
         {
             PlayerHealth--;
+            GameManager.Instance.UpdateLivesText(PlayerHealth);
         }
         else
         {
